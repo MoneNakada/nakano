@@ -1139,3 +1139,329 @@ Processing by Admin::CustomersController#show as HTML
 Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms | Allocations: 5693)
 
 
+Started GET "/" for 118.83.237.111 at 2022-05-28 02:06:12 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Public::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (Duration: 1.5ms | Allocations: 233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 15416)
+Completed 200 OK in 52ms (Views: 37.1ms | ActiveRecord: 0.8ms | Allocations: 18368)
+
+
+Started GET "/customers/unsubscribe" for 118.83.237.111 at 2022-05-28 02:07:38 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CustomersController#unsubscribe as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (Duration: 0.8ms | Allocations: 302)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 4570)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.1ms | Allocations: 5580)
+
+
+Started PATCH "/customers/withdraw" for 118.83.237.111 at 2022-05-28 02:07:41 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CustomersController#withdraw as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1014)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/public/customers_controller.rb:22:in `withdraw'
+Started GET "/customers/unsubscribe" for 118.83.237.111 at 2022-05-28 02:08:18 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CustomersController#unsubscribe as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (Duration: 0.4ms | Allocations: 177)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/layouts/application.html.erb:14
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 9990)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 1.0ms | Allocations: 10625)
+
+
+Started GET "/customers/unsubscribe" for 118.83.237.111 at 2022-05-28 02:08:19 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CustomersController#unsubscribe as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (Duration: 0.4ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4448)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 4844)
+
+
+Started PATCH "/customers/withdraw" for 118.83.237.111 at 2022-05-28 02:08:22 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CustomersController#withdraw as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1109)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/public/customers_controller.rb:23:in `withdraw'
+Started GET "/" for 118.83.237.111 at 2022-05-28 09:06:57 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Public::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (Duration: 1.5ms | Allocations: 233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 6628)
+Completed 200 OK in 50ms (Views: 34.0ms | ActiveRecord: 0.0ms | Allocations: 9509)
+
+
+Started GET "/" for 118.83.237.111 at 2022-05-28 09:06:58 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 9775)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 1.0ms | Allocations: 10180)
+
+
+Started GET "/customers/unsubscribe" for 118.83.237.111 at 2022-05-28 09:07:22 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CustomersController#unsubscribe as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (Duration: 1.4ms | Allocations: 302)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 4570)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.1ms | Allocations: 5580)
+
+
+Started PATCH "/customers/withdraw" for 118.83.237.111 at 2022-05-28 09:07:27 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CustomersController#withdraw as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1081)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/public/customers_controller.rb:23:in `withdraw'
+Started GET "/customers/unsubscribe" for 118.83.237.111 at 2022-05-28 09:17:25 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CustomersController#unsubscribe as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (Duration: 0.4ms | Allocations: 177)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/layouts/application.html.erb:14
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 9436)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.4ms | Allocations: 10069)
+
+
+Started GET "/customers/unsubscribe" for 118.83.237.111 at 2022-05-28 09:17:27 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CustomersController#unsubscribe as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (Duration: 0.3ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 4451)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 4850)
+
+
+Started PATCH "/customers/withdraw" for 118.83.237.111 at 2022-05-28 09:17:30 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CustomersController#withdraw as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/public/customers_controller.rb:23:in `withdraw'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:23:in `withdraw'
+  [1m[36mCustomer Update (0.2ms)[0m  [1m[33mUPDATE "customers" SET "is_active" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["is_active", 0], ["updated_at", "2022-05-28 09:17:30.819321"], ["id", 1]]
+  ↳ app/controllers/public/customers_controller.rb:23:in `withdraw'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:23:in `withdraw'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:23:in `withdraw'
+  [1m[36mCustomer Update (0.2ms)[0m  [1m[33mUPDATE "customers" SET "is_active" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["is_active", 0], ["updated_at", "2022-05-28 09:17:30.830782"], ["id", 2]]
+  ↳ app/controllers/public/customers_controller.rb:23:in `withdraw'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:23:in `withdraw'
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 32ms (ActiveRecord: 9.7ms | Allocations: 18490)
+
+
+Started GET "/" for 118.83.237.111 at 2022-05-28 09:17:31 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3636)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 4161)
+
+
+Started GET "/admin/sign_in" for 118.83.237.111 at 2022-05-28 09:18:32 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/shared/_links.html.erb (Duration: 0.7ms | Allocations: 167)
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 4910)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 8448)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 10623)
+
+
+Started GET "/admin/customers" for 118.83.237.111 at 2022-05-28 09:18:37 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::CustomersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/admin/customers/_index.html.erb:10
+  Rendered admin/customers/_index.html.erb (Duration: 2.8ms | Allocations: 1151)
+  Rendered admin/customers/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1466)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 5040)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms | Allocations: 6028)
+
+
+Started GET "/customers/sign_in" for 118.83.237.111 at 2022-05-28 09:18:54 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (Duration: 0.9ms | Allocations: 318)
+  Rendered public/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2060)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 5596)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 7038)
+
+
+Started POST "/customers/sign_in" for 118.83.237.111 at 2022-05-28 09:19:03 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "customer"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  ↳ app/controllers/public/sessions_controller.rb:26:in `configure_sign_in_params'
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/customers/sign_in
+Filter chain halted as :configure_sign_in_params rendered or redirected
+Completed 302 Found in 252ms (ActiveRecord: 0.6ms | Allocations: 6380)
+
+
+Started GET "/customers/sign_in" for 118.83.237.111 at 2022-05-28 09:19:04 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered public/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 4820)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 5431)
+
+
+Started POST "/customers/sign_in" for 118.83.237.111 at 2022-05-28 09:19:12 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "customer"=>{"email"=>"b@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "b@b"], ["LIMIT", 1]]
+  ↳ app/controllers/public/sessions_controller.rb:26:in `configure_sign_in_params'
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "b@b"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 484ms (ActiveRecord: 0.3ms | Allocations: 2253)
+
+
+Processing by Public::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "customer"=>{"email"=>"b@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered public/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1251)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 4799)
+Completed 200 OK in 246ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 5351)
+
+
+Started GET "/customers/sign_up" for 118.83.237.111 at 2022-05-28 09:19:15 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/registrations/new.html.erb within layouts/application
+  Rendered public/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 237)
+  Rendered public/shared/_links.html.erb (Duration: 0.2ms | Allocations: 147)
+  Rendered public/registrations/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2904)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 7273)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 8849)
+
+
+Started POST "/customers" for 118.83.237.111 at 2022-05-28 10:24:36 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "customer"=>{"first_name"=>"c", "last_name"=>"c            ", "first_name_kana"=>"c", "last_name_kana"=>"c", "email"=>"c@c", "postal_code"=>"c", "address"=>"c", "telephone_number"=>"c", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "c@c"], ["LIMIT", 1]]
+  [1m[36mCustomer Create (1.2ms)[0m  [1m[32mINSERT INTO "customers" ("email", "encrypted_password", "first_name", "last_name", "first_name_kana", "last_name_kana", "postal_code", "address", "telephone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "c@c"], ["encrypted_password", "$2a$12$b6ZdIlTgeAEdplyOy4p8NursXvdv4R/tRepqui2tOz4Rt6cDL3ywm"], ["first_name", "c"], ["last_name", "c            "], ["first_name_kana", "c"], ["last_name_kana", "c"], ["postal_code", "c"], ["address", "c"], ["telephone_number", "c"], ["created_at", "2022-05-28 10:24:36.973408"], ["updated_at", "2022-05-28 10:24:36.973408"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/customers/mypage
+Completed 302 Found in 257ms (ActiveRecord: 5.1ms | Allocations: 10070)
+
+
+Started GET "/customers/mypage" for 118.83.237.111 at 2022-05-28 10:24:37 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CustomersController#show as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 377)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3920)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 5280)
+
+
+Started GET "/admin/customers" for 118.83.237.111 at 2022-05-28 10:25:08 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::CustomersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/admin/customers/_index.html.erb:10
+  Rendered admin/customers/_index.html.erb (Duration: 2.1ms | Allocations: 984)
+  Rendered admin/customers/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1076)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 5487)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 5894)
+
+
