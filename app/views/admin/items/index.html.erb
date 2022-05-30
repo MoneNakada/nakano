@@ -1,0 +1,12 @@
+<section class="wrapper flex">
+	<div class="inner">
+		
+		<h2 class="section-ttl">商品一覧</h2>
+
+		<h3 class="text-right">
+			<%= link_to "+", new_admin_item_path, class: "new_admin_item" %>
+		</h3>
+			<%= render 'admin/items/index', items: @items %>
+
+	</div>
+</section>
