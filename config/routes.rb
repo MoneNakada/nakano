@@ -34,5 +34,6 @@ Rails.application.routes.draw do
     end
     resources :cart_items, only: [:index]
     delete 'cart_items/destroy_all' => 'cart_items#destroy_all', as: 'destroy_all_cart_items'
+    resources :addresses, only: [:index, :create, :edit, :update, :destroy]
   end
 end
