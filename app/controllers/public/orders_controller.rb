@@ -25,6 +25,7 @@ class Public::OrdersController < ApplicationController
   def create
     @order = current_customer.orders.new(order_params)
     @order.shipping_cost = 800
+    @cart_items = CartItem.all
     @sum = 0
     
     @cart_items.each do |cart_item| 
@@ -32,12 +33,13 @@ class Public::OrdersController < ApplicationController
 		end
 		
     @order.grand_total = @order.shipping_cost + @sum.to_i
+    
     if @order.save
       current_customer.cart_items.each do |cart_item| #注文詳細モデルに注文商品を保存
         @order_detail = OrderDetail.new
         @order_detail.order_id = @order.id
         @order_detail.item_id = cart_item.item_id
-        @order_detail.price = cart_item.subtotal
+        @order_detail.price = cart_item.item.with_tax_price
         @order_detail.amount = cart_item.amount
         @order_detail.save
       end

@@ -4,14 +4,14 @@
 	<%= form_with model: @order, url: orders_confirm_path do |f| %>
 		<div class="field mb2">
 			<h3>支払い方法</h3>
-	  	<%= f.radio_button :payment_method, "credit_card" %>
-	  	<%= f.label :payment_method, "クレジットカード" %>
-	  	<%= f.radio_button :payment_method, "transfer" %>
-	  	<%= f.label :payment_method, "銀行振込" %>
-	  	
+		  	<%= f.radio_button :payment_method, "credit_card" %>
+		  	<%= f.label :payment_method, Order.payment_methods_i18n[:credit_card] %>
+		  	<%= f.radio_button :payment_method, "transfer" %>
+		  	<%= f.label :payment_method, Order.payment_methods_i18n[:transfer] %>
+	  	</div>
 		<h3>お届け先</h3>
 		<div class="field mb2 select_address_0">
-			<label class="fz16"><%= f.radio_button :select_address, 0 %>ご自身の住所</label>
+			<label class="fz16"><%= f.radio_button :select_address, 0, :checked => true %>ご自身の住所</label>
 			<p>〒<%= current_customer.postal_code %> <%= current_customer.address %></p>
 			<p><%= current_customer.full_name %></p>
 		</div>

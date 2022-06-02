@@ -7499,3 +7499,2057 @@ Processing by Admin::OrdersController#show as HTML
 Completed 200 OK in 21ms (Views: 15.8ms | ActiveRecord: 0.5ms | Allocations: 10718)
 
 
+Started DELETE "/admin/sign_out" for 118.83.237.111 at 2022-06-02 02:44:03 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/admin/sign_in
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 1972)
+
+
+Started GET "/admin/sign_in" for 118.83.237.111 at 2022-06-02 02:44:03 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/shared/_links.html.erb (Duration: 0.3ms | Allocations: 164)
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1841)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 5919)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 7839)
+
+
+Started GET "/customers/sign_in" for 118.83.237.111 at 2022-06-02 02:44:06 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (Duration: 1.0ms | Allocations: 319)
+  Rendered public/sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 6959)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 8327)
+
+
+Started POST "/customers/sign_in" for 118.83.237.111 at 2022-06-02 02:44:15 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "customer"=>{"email"=>"c@c", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "c@c"], ["LIMIT", 1]]
+  ↳ app/controllers/public/sessions_controller.rb:26:in `configure_sign_in_params'
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "c@c"], ["LIMIT", 1]]
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 487ms (ActiveRecord: 0.4ms | Allocations: 4480)
+
+
+Started GET "/" for 118.83.237.111 at 2022-06-02 02:44:15 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 115)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 5070)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 6090)
+
+
+Started GET "/items" for 118.83.237.111 at 2022-06-02 02:44:20 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:12
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:13
+  Rendered public/items/index.html.erb within layouts/application (Duration: 68.5ms | Allocations: 21776)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 77.1ms | Allocations: 26497)
+Completed 200 OK in 79ms (Views: 76.6ms | ActiveRecord: 1.7ms | Allocations: 27525)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6e7b0ac510bf08c106505afe19e551ae64b2d557/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:44:20 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6e7b0ac510bf08c106505afe19e551ae64b2d557", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: ow224sgjh8wu6u83g02sg8ltk22u (https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAyOjQ5OjIwLjM3NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ee92fd2da3bcd601de66a8c4e2c939a532b0fa4c/ddd4d1f25d2b182ab113f989698b4047.jpg)[0m
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAyOjQ5OjIwLjM3NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ee92fd2da3bcd601de66a8c4e2c939a532b0fa4c/ddd4d1f25d2b182ab113f989698b4047.jpg
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms | Allocations: 1764)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAyOjQ5OjIwLjM3NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ee92fd2da3bcd601de66a8c4e2c939a532b0fa4c/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:44:20 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 344)
+
+
+Started GET "/items/1" for 118.83.237.111 at 2022-06-02 02:44:22 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/show.html.erb:6
+  Rendered public/items/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2766)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 7620)
+Completed 200 OK in 20ms (Views: 11.0ms | ActiveRecord: 0.7ms | Allocations: 13199)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAyOjQ5OjIwLjM3NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ee92fd2da3bcd601de66a8c4e2c939a532b0fa4c/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:44:23 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started POST "/items/1/cart_items" for 118.83.237.111 at 2022-06-02 02:44:25 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cart_item"=>{"amount"=>"1"}, "commit"=>"カートに入れる", "item_id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:7:in `create'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:8:in `create'
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ? AND "cart_items"."item_id" = ? LIMIT ?[0m  [["customer_id", 3], ["item_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mCartItem Create (0.2ms)[0m  [1m[32mINSERT INTO "cart_items" ("created_at", "updated_at", "customer_id", "item_id", "amount") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2022-06-02 02:44:25.879259"], ["updated_at", "2022-06-02 02:44:25.879259"], ["customer_id", 3], ["item_id", 1], ["amount", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/cart_items
+Completed 302 Found in 22ms (ActiveRecord: 4.1ms | Allocations: 9349)
+
+
+Started GET "/cart_items" for 118.83.237.111 at 2022-06-02 02:44:26 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/public/cart_items/index.html.erb:19
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:23
+  Rendered public/cart_items/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 4515)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 9329)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.5ms | Allocations: 10349)
+
+
+Started PATCH "/items/1/cart_items/8" for 118.83.237.111 at 2022-06-02 02:44:38 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cart_item"=>{"amount"=>"8"}, "commit"=>"変更", "item_id"=>"1", "id"=>"8"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:25:in `update'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:26:in `update'
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ? AND "cart_items"."item_id" = ? LIMIT ?[0m  [["customer_id", 3], ["item_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/cart_items_controller.rb:27:in `update'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:27:in `update'
+  [1m[36mCartItem Update (0.2ms)[0m  [1m[33mUPDATE "cart_items" SET "updated_at" = ?, "amount" = ? WHERE "cart_items"."id" = ?[0m  [["updated_at", "2022-06-02 02:44:38.457675"], ["amount", 8], ["id", 8]]
+  ↳ app/controllers/public/cart_items_controller.rb:27:in `update'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/cart_items_controller.rb:27:in `update'
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/cart_items
+Completed 302 Found in 21ms (ActiveRecord: 4.4ms | Allocations: 7655)
+
+
+Started GET "/cart_items" for 118.83.237.111 at 2022-06-02 02:44:38 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/public/cart_items/index.html.erb:19
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:23
+  Rendered public/cart_items/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 3937)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 8745)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.4ms | Allocations: 9152)
+
+
+Started GET "/orders/new" for 118.83.237.111 at 2022-06-02 02:44:42 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/orders/new.html.erb:15
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/views/public/orders/new.html.erb:20
+  Rendered public/orders/new.html.erb within layouts/application (Duration: 13.6ms | Allocations: 8973)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 12899)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.7ms | Allocations: 14732)
+
+
+Started POST "/orders/confirm" for 118.83.237.111 at 2022-06-02 02:44:54 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#confirm as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order"=>{"payment_method"=>"credit_card", "address_id"=>"", "select_address"=>"2", "postal_code"=>"2", "destination"=>"2", "name"=>"2"}, "commit"=>"注文確認画面に進む"}
+[31mUnpermitted parameters: :address_id, :select_address[0m
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/confirm.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/public/orders/confirm.html.erb:15
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/orders/confirm.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/orders/confirm.html.erb:19
+  Rendered public/orders/confirm.html.erb within layouts/application (Duration: 11.2ms | Allocations: 4288)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 9105)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.4ms | Allocations: 9838)
+
+
+Started POST "/orders" for 118.83.237.111 at 2022-06-02 02:48:33 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order"=>{"payment_method"=>"credit_card", "postal_code"=>"2", "destination"=>"2", "name"=>"2"}, "commit"=>"注文を確定する"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/public/orders_controller.rb:26:in `create'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:26:in `create'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.6ms | Allocations: 19312)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/public/orders_controller.rb:30:in `create'
+Started POST "/orders" for 118.83.237.111 at 2022-06-02 02:49:22 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order"=>{"payment_method"=>"credit_card", "postal_code"=>"2", "destination"=>"2", "name"=>"2"}, "commit"=>"注文を確定する"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/public/orders_controller.rb:26:in `create'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:26:in `create'
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/controllers/public/orders_controller.rb:31:in `create'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/cart_item.rb:6:in `subtotal'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:37:in `create'
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "postal_code", "destination", "name", "shipping_cost", "grand_total", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["customer_id", 3], ["postal_code", "2"], ["destination", "2"], ["name", "2"], ["shipping_cost", 800], ["grand_total", 816], ["created_at", "2022-06-02 02:49:22.723473"], ["updated_at", "2022-06-02 02:49:22.723473"]]
+  ↳ app/controllers/public/orders_controller.rb:37:in `create'
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:37:in `create'
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/controllers/public/orders_controller.rb:38:in `create'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/cart_item.rb:6:in `subtotal'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mOrderDetail Create (0.2ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "item_id", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 2], ["item_id", 1], ["price", 16], ["amount", 8], ["created_at", "2022-06-02 02:49:22.762958"], ["updated_at", "2022-06-02 02:49:22.762958"]]
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:46:in `create'
+  [1m[36mCartItem Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/public/orders_controller.rb:46:in `create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:46:in `create'
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/orders/thanks
+Completed 302 Found in 97ms (ActiveRecord: 17.6ms | Allocations: 54045)
+
+
+Started GET "/orders/thanks" for 118.83.237.111 at 2022-06-02 02:49:22 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#thanks as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/thanks.html.erb within layouts/application
+  Rendered public/orders/thanks.html.erb within layouts/application (Duration: 0.6ms | Allocations: 200)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 5111)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.1ms | Allocations: 5785)
+
+
+Started DELETE "/customers/sign_out" for 118.83.237.111 at 2022-06-02 02:49:29 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 2064)
+
+
+Started GET "/" for 118.83.237.111 at 2022-06-02 02:49:29 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 4118)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 4659)
+
+
+Started GET "/admin/sign_in" for 118.83.237.111 at 2022-06-02 02:49:35 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/shared/_links.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1258)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 5280)
+Completed 200 OK in 22ms (Views: 16.9ms | ActiveRecord: 0.2ms | Allocations: 9732)
+
+
+Started POST "/admin/sign_in" for 118.83.237.111 at 2022-06-02 02:49:37 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/admin
+Completed 302 Found in 245ms (ActiveRecord: 0.2ms | Allocations: 2663)
+
+
+Started GET "/admin" for 118.83.237.111 at 2022-06-02 02:49:37 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/homes/top.html.erb within layouts/application
+  Rendered admin/homes/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 118)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 5023)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 6011)
+
+
+Started GET "/admin/orders" for 118.83.237.111 at 2022-06-02 02:49:41 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:14
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/index.html.erb:17
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("order_details"."amount") FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  ↳ app/views/admin/orders/index.html.erb:18
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/index.html.erb:17
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("order_details"."amount") FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  ↳ app/views/admin/orders/index.html.erb:18
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 4946)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 9719)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.7ms | Allocations: 10319)
+
+
+Started GET "/admin/orders/2" for 118.83.237.111 at 2022-06-02 02:49:47 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/admin/orders_controller.rb:8:in `show'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/orders_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  ↳ app/views/admin/orders/show.html.erb:57
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/show.html.erb:58
+  Rendered admin/orders/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2910)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 7761)
+Completed 200 OK in 19ms (Views: 13.1ms | ActiveRecord: 0.5ms | Allocations: 9662)
+
+
+Started DELETE "/admin/sign_out" for 118.83.237.111 at 2022-06-02 02:55:50 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/admin/sign_in
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms | Allocations: 2825)
+
+
+Started GET "/admin/sign_in" for 118.83.237.111 at 2022-06-02 02:55:51 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/shared/_links.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1202)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 5264)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 5872)
+
+
+Started GET "/customers/sign_in" for 118.83.237.111 at 2022-06-02 02:56:00 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered public/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1322)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 6342)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 7121)
+
+
+Started POST "/customers/sign_in" for 118.83.237.111 at 2022-06-02 02:56:09 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "customer"=>{"email"=>"c@c", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "c@c"], ["LIMIT", 1]]
+  ↳ app/controllers/public/sessions_controller.rb:26:in `configure_sign_in_params'
+  [1m[36mCustomer Load (1.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "c@c"], ["LIMIT", 1]]
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 492ms (ActiveRecord: 1.6ms | Allocations: 3074)
+
+
+Started GET "/" for 118.83.237.111 at 2022-06-02 02:56:10 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 4989)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.2ms | Allocations: 5382)
+
+
+Started GET "/items" for 118.83.237.111 at 2022-06-02 02:56:16 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:12
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:13
+  Rendered public/items/index.html.erb within layouts/application (Duration: 38.5ms | Allocations: 18495)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 49.8ms | Allocations: 23215)
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 1.9ms | Allocations: 23778)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6e7b0ac510bf08c106505afe19e551ae64b2d557/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:56:16 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6e7b0ac510bf08c106505afe19e551ae64b2d557", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: ow224sgjh8wu6u83g02sg8ltk22u (https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg)[0m
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1747)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:56:17 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 343)
+
+
+Started GET "/items/1" for 118.83.237.111 at 2022-06-02 02:56:18 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/show.html.erb:6
+  Rendered public/items/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2306)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 8076)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.4ms | Allocations: 9152)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:56:18 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started POST "/items/1/cart_items" for 118.83.237.111 at 2022-06-02 02:56:20 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cart_item"=>{"amount"=>"1"}, "commit"=>"カートに入れる", "item_id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:7:in `create'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:8:in `create'
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ? AND "cart_items"."item_id" = ? LIMIT ?[0m  [["customer_id", 3], ["item_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mCartItem Create (0.2ms)[0m  [1m[32mINSERT INTO "cart_items" ("created_at", "updated_at", "customer_id", "item_id", "amount") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2022-06-02 02:56:20.134965"], ["updated_at", "2022-06-02 02:56:20.134965"], ["customer_id", 3], ["item_id", 1], ["amount", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/cart_items
+Completed 302 Found in 30ms (ActiveRecord: 4.6ms | Allocations: 7741)
+
+
+Started GET "/cart_items" for 118.83.237.111 at 2022-06-02 02:56:20 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/public/cart_items/index.html.erb:19
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:23
+  Rendered public/cart_items/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 3972)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 8786)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.5ms | Allocations: 9343)
+
+
+Started GET "/orders/new" for 118.83.237.111 at 2022-06-02 02:56:21 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/orders/new.html.erb:15
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/views/public/orders/new.html.erb:20
+  Rendered public/orders/new.html.erb within layouts/application (Duration: 13.3ms | Allocations: 8448)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 12374)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.8ms | Allocations: 12793)
+
+
+Started GET "/items" for 118.83.237.111 at 2022-06-02 02:56:25 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:12
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:13
+  Rendered public/items/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 5364)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 10173)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.6ms | Allocations: 10581)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:56:26 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/items/2" for 118.83.237.111 at 2022-06-02 02:56:27 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/items/show.html.erb:7
+  Rendered public/items/show.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2768)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 8245)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.5ms | Allocations: 9440)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:56:27 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started POST "/items/2/cart_items" for 118.83.237.111 at 2022-06-02 02:56:30 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cart_item"=>{"amount"=>"9"}, "commit"=>"カートに入れる", "item_id"=>"2"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:7:in `create'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:8:in `create'
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ? AND "cart_items"."item_id" = ? LIMIT ?[0m  [["customer_id", 3], ["item_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mCartItem Create (1.9ms)[0m  [1m[32mINSERT INTO "cart_items" ("created_at", "updated_at", "customer_id", "item_id", "amount") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2022-06-02 02:56:30.150705"], ["updated_at", "2022-06-02 02:56:30.150705"], ["customer_id", 3], ["item_id", 2], ["amount", 9]]
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/cart_items
+Completed 302 Found in 28ms (ActiveRecord: 6.0ms | Allocations: 7653)
+
+
+Started GET "/cart_items" for 118.83.237.111 at 2022-06-02 02:56:30 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/public/cart_items/index.html.erb:19
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:23
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:23
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:24
+  Rendered public/cart_items/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 7531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 12339)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.6ms | Allocations: 12745)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:56:30 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started GET "/" for 118.83.237.111 at 2022-06-02 02:56:32 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4934)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 5330)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:56:33 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/items" for 118.83.237.111 at 2022-06-02 02:56:35 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:12
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:13
+  Rendered public/items/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 5349)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 10158)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.5ms | Allocations: 10568)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:56:36 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 3286)
+
+
+Started GET "/items/1" for 118.83.237.111 at 2022-06-02 02:56:38 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/show.html.erb:6
+  Rendered public/items/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 7941)
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 0.4ms | Allocations: 8906)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:56:38 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started POST "/items/1/cart_items" for 118.83.237.111 at 2022-06-02 02:56:39 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cart_item"=>{"amount"=>"1"}, "commit"=>"カートに入れる", "item_id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:7:in `create'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:8:in `create'
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ? AND "cart_items"."item_id" = ? LIMIT ?[0m  [["customer_id", 3], ["item_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/cart_items_controller.rb:11:in `create'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:11:in `create'
+  [1m[36mCartItem Update (0.2ms)[0m  [1m[33mUPDATE "cart_items" SET "updated_at" = ?, "amount" = ? WHERE "cart_items"."id" = ?[0m  [["updated_at", "2022-06-02 02:56:39.879798"], ["amount", 2], ["id", 9]]
+  ↳ app/controllers/public/cart_items_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/cart_items_controller.rb:11:in `create'
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/cart_items
+Completed 302 Found in 21ms (ActiveRecord: 4.0ms | Allocations: 7667)
+
+
+Started GET "/cart_items" for 118.83.237.111 at 2022-06-02 02:56:40 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/public/cart_items/index.html.erb:19
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:23
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:23
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:24
+  Rendered public/cart_items/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 7526)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 12335)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.7ms | Allocations: 12742)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:56:40 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/orders/new" for 118.83.237.111 at 2022-06-02 02:56:43 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/orders/new.html.erb:15
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/views/public/orders/new.html.erb:20
+  Rendered public/orders/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2993)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 7011)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.3ms | Allocations: 7429)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:56:43 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started POST "/orders/confirm" for 118.83.237.111 at 2022-06-02 02:56:49 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#confirm as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order"=>{"payment_method"=>"credit_card", "select_address"=>"0", "address_id"=>"", "postal_code"=>"", "destination"=>"", "name"=>""}, "commit"=>"注文確認画面に進む"}
+[31mUnpermitted parameters: :select_address, :address_id[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:10:in `confirm'
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/confirm.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/public/orders/confirm.html.erb:15
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/orders/confirm.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/orders/confirm.html.erb:19
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/orders/confirm.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/orders/confirm.html.erb:19
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/orders/confirm.html.erb:20
+  Rendered public/orders/confirm.html.erb within layouts/application (Duration: 15.0ms | Allocations: 6418)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 10358)
+Completed 200 OK in 24ms (Views: 19.3ms | ActiveRecord: 0.6ms | Allocations: 11752)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:56:50 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started POST "/orders" for 118.83.237.111 at 2022-06-02 02:57:09 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order"=>{"payment_method"=>"credit_card", "postal_code"=>"c", "destination"=>"c", "name"=>"c c            "}, "commit"=>"注文を確定する"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:26:in `create'
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/controllers/public/orders_controller.rb:31:in `create'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/cart_item.rb:6:in `subtotal'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/cart_item.rb:6:in `subtotal'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:37:in `create'
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "postal_code", "destination", "name", "shipping_cost", "grand_total", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["customer_id", 3], ["postal_code", "c"], ["destination", "c"], ["name", "c c            "], ["shipping_cost", 800], ["grand_total", 3009], ["created_at", "2022-06-02 02:57:09.453808"], ["updated_at", "2022-06-02 02:57:09.453808"]]
+  ↳ app/controllers/public/orders_controller.rb:37:in `create'
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:37:in `create'
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/controllers/public/orders_controller.rb:38:in `create'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/cart_item.rb:6:in `subtotal'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mOrderDetail Create (0.2ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "item_id", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 3], ["item_id", 1], ["price", 4], ["amount", 2], ["created_at", "2022-06-02 02:57:09.484360"], ["updated_at", "2022-06-02 02:57:09.484360"]]
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/cart_item.rb:6:in `subtotal'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mOrderDetail Create (0.2ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "item_id", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 3], ["item_id", 2], ["price", 2205], ["amount", 9], ["created_at", "2022-06-02 02:57:09.501623"], ["updated_at", "2022-06-02 02:57:09.501623"]]
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:46:in `create'
+  [1m[36mCartItem Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/public/orders_controller.rb:46:in `create'
+  [1m[36mCartItem Destroy (0.1ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/public/orders_controller.rb:46:in `create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:46:in `create'
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/orders/thanks
+Completed 302 Found in 80ms (ActiveRecord: 17.1ms | Allocations: 26398)
+
+
+Started GET "/orders/thanks" for 118.83.237.111 at 2022-06-02 02:57:09 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#thanks as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/thanks.html.erb within layouts/application
+  Rendered public/orders/thanks.html.erb within layouts/application (Duration: 0.3ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4977)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.1ms | Allocations: 5371)
+
+
+Started DELETE "/customers/sign_out" for 118.83.237.111 at 2022-06-02 02:57:15 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1758)
+
+
+Started GET "/" for 118.83.237.111 at 2022-06-02 02:57:15 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 4101)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 4489)
+
+
+Started GET "/admin/sign_in" for 118.83.237.111 at 2022-06-02 02:57:23 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/shared/_links.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1188)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 5239)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 5846)
+
+
+Started POST "/admin/sign_in" for 118.83.237.111 at 2022-06-02 02:57:25 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/admin
+Completed 302 Found in 244ms (ActiveRecord: 0.2ms | Allocations: 2248)
+
+
+Started GET "/admin" for 118.83.237.111 at 2022-06-02 02:57:26 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/homes/top.html.erb within layouts/application
+  Rendered admin/homes/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4902)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.1ms | Allocations: 5295)
+
+
+Started GET "/admin/orders" for 118.83.237.111 at 2022-06-02 02:57:30 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:14
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/index.html.erb:17
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("order_details"."amount") FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  ↳ app/views/admin/orders/index.html.erb:18
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/index.html.erb:17
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("order_details"."amount") FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  ↳ app/views/admin/orders/index.html.erb:18
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/index.html.erb:17
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("order_details"."amount") FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  ↳ app/views/admin/orders/index.html.erb:18
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 6758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 11610)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.9ms | Allocations: 12018)
+
+
+Started GET "/admin/orders/3" for 118.83.237.111 at 2022-06-02 02:57:33 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/orders_controller.rb:8:in `show'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/orders_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  ↳ app/views/admin/orders/show.html.erb:57
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/show.html.erb:58
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/show.html.erb:58
+  Rendered admin/orders/show.html.erb within layouts/application (Duration: 11.0ms | Allocations: 5070)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 9921)
+Completed 200 OK in 24ms (Views: 18.6ms | ActiveRecord: 0.6ms | Allocations: 11701)
+
+
+Started GET "/admin/orders/3" for 118.83.237.111 at 2022-06-02 02:58:28 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/orders_controller.rb:8:in `show'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/orders_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  ↳ app/views/admin/orders/show.html.erb:57
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/show.html.erb:58
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/show.html.erb:58
+  Rendered admin/orders/show.html.erb within layouts/application (Duration: 10.0ms | Allocations: 4090)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 8942)
+Completed 200 OK in 26ms (Views: 19.2ms | ActiveRecord: 0.5ms | Allocations: 10720)
+
+
+Started DELETE "/admin/sign_out" for 118.83.237.111 at 2022-06-02 02:58:38 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/admin/sign_in
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 1698)
+
+
+Started GET "/admin/sign_in" for 118.83.237.111 at 2022-06-02 02:58:39 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/shared/_links.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 5244)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 5849)
+
+
+Started GET "/customers/sign_in" for 118.83.237.111 at 2022-06-02 02:58:41 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered public/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1250)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 5301)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 5921)
+
+
+Started POST "/customers/sign_in" for 118.83.237.111 at 2022-06-02 02:58:49 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "customer"=>{"email"=>"c@c", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "c@c"], ["LIMIT", 1]]
+  ↳ app/controllers/public/sessions_controller.rb:26:in `configure_sign_in_params'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "c@c"], ["LIMIT", 1]]
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 485ms (ActiveRecord: 0.3ms | Allocations: 2882)
+
+
+Started GET "/" for 118.83.237.111 at 2022-06-02 02:58:49 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4938)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.1ms | Allocations: 5330)
+
+
+Started GET "/items" for 118.83.237.111 at 2022-06-02 02:58:53 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:12
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:13
+  Rendered public/items/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 5358)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 10167)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.6ms | Allocations: 10576)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:58:54 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/items/1" for 118.83.237.111 at 2022-06-02 02:58:56 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/show.html.erb:6
+  Rendered public/items/show.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3022)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 7948)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.7ms | Allocations: 8913)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:58:56 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started POST "/items/1/cart_items" for 118.83.237.111 at 2022-06-02 02:59:00 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cart_item"=>{"amount"=>"2"}, "commit"=>"カートに入れる", "item_id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:7:in `create'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:8:in `create'
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ? AND "cart_items"."item_id" = ? LIMIT ?[0m  [["customer_id", 3], ["item_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mCartItem Create (0.2ms)[0m  [1m[32mINSERT INTO "cart_items" ("created_at", "updated_at", "customer_id", "item_id", "amount") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2022-06-02 02:59:00.663683"], ["updated_at", "2022-06-02 02:59:00.663683"], ["customer_id", 3], ["item_id", 1], ["amount", 2]]
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/cart_items
+Completed 302 Found in 20ms (ActiveRecord: 4.2ms | Allocations: 7653)
+
+
+Started GET "/cart_items" for 118.83.237.111 at 2022-06-02 02:59:00 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/public/cart_items/index.html.erb:19
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:23
+  Rendered public/cart_items/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 3937)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 8746)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.4ms | Allocations: 9153)
+
+
+Started GET "/" for 118.83.237.111 at 2022-06-02 02:59:05 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 5717)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 6113)
+
+
+Started GET "/items" for 118.83.237.111 at 2022-06-02 02:59:06 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:12
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:13
+  Rendered public/items/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 4389)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 9198)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.5ms | Allocations: 9606)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:59:06 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/items/2" for 118.83.237.111 at 2022-06-02 02:59:09 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/items/show.html.erb:7
+  Rendered public/items/show.html.erb within layouts/application (Duration: 11.1ms | Allocations: 3424)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 8479)
+Completed 200 OK in 35ms (Views: 31.2ms | ActiveRecord: 0.6ms | Allocations: 9444)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:59:09 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started POST "/items/2/cart_items" for 118.83.237.111 at 2022-06-02 02:59:12 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cart_item"=>{"amount"=>"9"}, "commit"=>"カートに入れる", "item_id"=>"2"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:7:in `create'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:8:in `create'
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ? AND "cart_items"."item_id" = ? LIMIT ?[0m  [["customer_id", 3], ["item_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mCartItem Create (0.2ms)[0m  [1m[32mINSERT INTO "cart_items" ("created_at", "updated_at", "customer_id", "item_id", "amount") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2022-06-02 02:59:12.614779"], ["updated_at", "2022-06-02 02:59:12.614779"], ["customer_id", 3], ["item_id", 2], ["amount", 9]]
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/cart_items
+Completed 302 Found in 21ms (ActiveRecord: 4.6ms | Allocations: 7653)
+
+
+Started GET "/cart_items" for 118.83.237.111 at 2022-06-02 02:59:12 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/public/cart_items/index.html.erb:19
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:23
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:23
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:24
+  Rendered public/cart_items/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 7527)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 12335)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.6ms | Allocations: 12741)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:59:13 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/orders/new" for 118.83.237.111 at 2022-06-02 02:59:42 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/orders/new.html.erb:15
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/views/public/orders/new.html.erb:20
+  Rendered public/orders/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2993)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 7967)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.2ms | Allocations: 8385)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 02:59:42 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/admin/orders/3" for 118.83.237.111 at 2022-06-02 03:00:34 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/orders_controller.rb:8:in `show'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/orders_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  ↳ app/views/admin/orders/show.html.erb:57
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/show.html.erb:58
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/show.html.erb:58
+  Rendered admin/orders/show.html.erb within layouts/application (Duration: 10.3ms | Allocations: 4712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 10129)
+Completed 200 OK in 26ms (Views: 20.1ms | ActiveRecord: 0.6ms | Allocations: 12754)
+
+
+Started GET "/orders/new" for 118.83.237.111 at 2022-06-02 03:00:40 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/new.html.erb within layouts/application
+  Rendered public/orders/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1471)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1542)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2537)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <section class="inner">
+	<h2 class="section-ttl">注文情報入力</h2>
+	
+	<%= form_with model: @order, url: orders_confirm_path do |f| %>
+		<div class="field mb2">
+			<h3>支払い方法</h3>
+	  	<%= f.radio_button :payment_method, "credit_card" %>
+	  	<%= f.label :payment_method, "クレジットカード" %>
+	  	<%= f.radio_button :payment_method, "transfer" %>
+	  	<%= f.label :payment_method, "銀行振込" %>
+	  	
+		<h3>お届け先</h3>
+		<div class="field mb2 select_address_0">
+			<label class="fz16"><%= f.radio_button :select_address, 0, checked :true %>ご自身の住所</label>
+			<p>〒<%= current_customer.postal_code %> <%= current_customer.address %></p>
+			<p><%= current_customer.full_name %></p>
+		</div>
+		<div class="field mb2 select_address_1">
+			<label class="fz16"><%= f.radio_button :select_address, 1 %>登録済住所から選択</label>
+			<%= f.select "address_id", options_from_collection_for_select(current_customer.addresses, :id, :finally_address), prompt: "住所を選択してください" %>
+		</div>
+		<div class="field mb2 select_address_2">
+			<label class="fz16"><%= f.radio_button :select_address, 2 %>新しいお届け先</label>
+			<div class="field">
+				<%= f.label :postal_code, "郵便番号(ハイフンなし7桁)" %>
+				<%= f.text_field :postal_code, placeholder: "郵便番号", class: "jpostal_code" %>
+			</div>
+			<div class="field">
+				<%= f.label :destination, "住所(郵便番号から自動入力)" %>
+				<%= f.text_field :destination, placeholder: "住所", class: "jpostal_address" %>
+			</div>
+			<div class="field">
+				<%= f.label :name, "宛名" %>
+				<%= f.text_field :name, placeholder: "宛名" %>
+			</div>
+		</div>
+		<%= f.submit "注文確認画面に進む", class: "btn btn-primary submit_to_confirm_order" %>
+	<% end %>
+</section>
+):
+1:    <section class="inner">
+2:    	<h2 class="section-ttl">注文情報入力</h2>
+3:    	
+4:    	<%= form_with model: @order, url: orders_confirm_path do |f| %>
+5:    		<div class="field mb2">
+6:    			<h3>支払い方法</h3>
+7:    	  	<%= f.radio_button :payment_method, "credit_card" %>
+8:    	  	<%= f.label :payment_method, "クレジットカード" %>
+9:    	  	<%= f.radio_button :payment_method, "transfer" %>
+10:    	  	<%= f.label :payment_method, "銀行振込" %>
+11:    	  	
+12:    		<h3>お届け先</h3>
+13:    		<div class="field mb2 select_address_0">
+14:    			<label class="fz16"><%= f.radio_button :select_address, 0, checked :true %>ご自身の住所</label>
+15:    			<p>〒<%= current_customer.postal_code %> <%= current_customer.address %></p>
+16:    			<p><%= current_customer.full_name %></p>
+17:    		</div>
+18:    		<div class="field mb2 select_address_1">
+19:    			<label class="fz16"><%= f.radio_button :select_address, 1 %>登録済住所から選択</label>
+20:    			<%= f.select "address_id", options_from_collection_for_select(current_customer.addresses, :id, :finally_address), prompt: "住所を選択してください" %>
+21:    		</div>
+22:    		<div class="field mb2 select_address_2">
+23:    			<label class="fz16"><%= f.radio_button :select_address, 2 %>新しいお届け先</label>
+24:    			<div class="field">
+25:    				<%= f.label :postal_code, "郵便番号(ハイフンなし7桁)" %>
+26:    				<%= f.text_field :postal_code, placeholder: "郵便番号", class: "jpostal_code" %>
+27:    			</div>
+28:    			<div class="field">
+29:    				<%= f.label :destination, "住所(郵便番号から自動入力)" %>
+30:    				<%= f.text_field :destination, placeholder: "住所", class: "jpostal_address" %>
+31:    			</div>
+32:    			<div class="field">
+33:    				<%= f.label :name, "宛名" %>
+34:    				<%= f.text_field :name, placeholder: "宛名" %>
+35:    			</div>
+36:    		</div>
+37:    		<%= f.submit "注文確認画面に進む", class: "btn btn-primary submit_to_confirm_order" %>
+38:    	<% end %>
+39:    </section>
+  
+app/views/public/orders/new.html.erb:14: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/views/public/orders/new.html.erb:14: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/views/public/orders/new.html.erb:14: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/views/public/orders/new.html.erb:14: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/views/public/orders/new.html.erb:14: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/views/public/orders/new.html.erb:14: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+Started GET "/orders/new" for 118.83.237.111 at 2022-06-02 03:01:11 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/orders/new.html.erb:15
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/views/public/orders/new.html.erb:20
+  Rendered public/orders/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3454)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 8001)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.2ms | Allocations: 9264)
+
+
+Started POST "/orders/confirm" for 118.83.237.111 at 2022-06-02 03:01:14 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#confirm as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order"=>{"payment_method"=>"credit_card", "select_address"=>"0", "address_id"=>"", "postal_code"=>"", "destination"=>"", "name"=>""}, "commit"=>"注文確認画面に進む"}
+[31mUnpermitted parameters: :select_address, :address_id[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:10:in `confirm'
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/confirm.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/public/orders/confirm.html.erb:15
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/orders/confirm.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/orders/confirm.html.erb:19
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public/orders/confirm.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/orders/confirm.html.erb:19
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/orders/confirm.html.erb:20
+  Rendered public/orders/confirm.html.erb within layouts/application (Duration: 15.8ms | Allocations: 6999)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 10946)
+Completed 200 OK in 25ms (Views: 20.0ms | ActiveRecord: 0.6ms | Allocations: 12447)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjAxOjE2Ljk3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a5b519eb6af1a3f311df365de1c3b53f0e242f40/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 03:01:14 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started POST "/orders" for 118.83.237.111 at 2022-06-02 03:04:41 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order"=>{"payment_method"=>"credit_card", "postal_code"=>"c", "destination"=>"c", "name"=>"c c            "}, "commit"=>"注文を確定する"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/public/orders_controller.rb:26:in `create'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:26:in `create'
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/controllers/public/orders_controller.rb:31:in `create'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/cart_item.rb:6:in `subtotal'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/cart_item.rb:6:in `subtotal'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:37:in `create'
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "postal_code", "destination", "name", "shipping_cost", "grand_total", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["customer_id", 3], ["postal_code", "c"], ["destination", "c"], ["name", "c c            "], ["shipping_cost", 800], ["grand_total", 3009], ["created_at", "2022-06-02 03:04:41.334238"], ["updated_at", "2022-06-02 03:04:41.334238"]]
+  ↳ app/controllers/public/orders_controller.rb:37:in `create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:37:in `create'
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/controllers/public/orders_controller.rb:38:in `create'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:42:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mOrderDetail Create (0.2ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "item_id", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 4], ["item_id", 1], ["price", 2], ["amount", 2], ["created_at", "2022-06-02 03:04:41.363292"], ["updated_at", "2022-06-02 03:04:41.363292"]]
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:42:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mOrderDetail Create (0.2ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "item_id", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 4], ["item_id", 2], ["price", 245], ["amount", 9], ["created_at", "2022-06-02 03:04:41.386279"], ["updated_at", "2022-06-02 03:04:41.386279"]]
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:44:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:46:in `create'
+  [1m[36mCartItem Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/public/orders_controller.rb:46:in `create'
+  [1m[36mCartItem Destroy (0.1ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/public/orders_controller.rb:46:in `create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/orders_controller.rb:46:in `create'
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/orders/thanks
+Completed 302 Found in 136ms (ActiveRecord: 18.5ms | Allocations: 61948)
+
+
+Started GET "/orders/thanks" for 118.83.237.111 at 2022-06-02 03:04:41 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#thanks as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/thanks.html.erb within layouts/application
+  Rendered public/orders/thanks.html.erb within layouts/application (Duration: 0.7ms | Allocations: 196)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 5107)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.1ms | Allocations: 5780)
+
+
+Started GET "/items" for 118.83.237.111 at 2022-06-02 03:04:49 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:12
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:13
+  Rendered public/items/index.html.erb within layouts/application (Duration: 36.0ms | Allocations: 18609)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 44.7ms | Allocations: 23329)
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 2.0ms | Allocations: 24366)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6e7b0ac510bf08c106505afe19e551ae64b2d557/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 03:04:49 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6e7b0ac510bf08c106505afe19e551ae64b2d557", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: ow224sgjh8wu6u83g02sg8ltk22u (https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjA5OjQ5Ljg2NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d0ca627aa0555caabc479bac480a5af05760ce03/ddd4d1f25d2b182ab113f989698b4047.jpg)[0m
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjA5OjQ5Ljg2NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d0ca627aa0555caabc479bac480a5af05760ce03/ddd4d1f25d2b182ab113f989698b4047.jpg
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 1716)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjA5OjQ5Ljg2NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d0ca627aa0555caabc479bac480a5af05760ce03/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 03:04:50 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 341)
+
+
+Started DELETE "/customers/sign_out" for 118.83.237.111 at 2022-06-02 03:04:58 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 2058)
+
+
+Started GET "/" for 118.83.237.111 at 2022-06-02 03:04:58 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 115)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 4196)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 5211)
+
+
+Started GET "/admin/sign_in" for 118.83.237.111 at 2022-06-02 03:05:06 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/shared/_links.html.erb (Duration: 0.4ms | Allocations: 163)
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1811)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 5836)
+Completed 200 OK in 17ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 11461)
+
+
+Started POST "/admin/sign_in" for 118.83.237.111 at 2022-06-02 03:05:09 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/admin
+Completed 302 Found in 250ms (ActiveRecord: 0.3ms | Allocations: 3658)
+
+
+Started GET "/admin" for 118.83.237.111 at 2022-06-02 03:05:09 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/homes/top.html.erb within layouts/application
+  Rendered admin/homes/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 115)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 5021)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.2ms | Allocations: 6009)
+
+
+Started GET "/admin/orders" for 118.83.237.111 at 2022-06-02 03:05:18 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/orders/index.html.erb:14
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/index.html.erb:17
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("order_details"."amount") FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  ↳ app/views/admin/orders/index.html.erb:18
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/index.html.erb:17
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("order_details"."amount") FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  ↳ app/views/admin/orders/index.html.erb:18
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/index.html.erb:17
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("order_details"."amount") FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  ↳ app/views/admin/orders/index.html.erb:18
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/index.html.erb:17
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("order_details"."amount") FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 4]]
+  ↳ app/views/admin/orders/index.html.erb:18
+  Rendered admin/orders/index.html.erb within layouts/application (Duration: 26.7ms | Allocations: 9416)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 14179)
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 1.0ms | Allocations: 15183)
+
+
+Started GET "/admin/orders/4" for 118.83.237.111 at 2022-06-02 03:05:23 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/orders_controller.rb:8:in `show'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/orders_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 4]]
+  ↳ app/views/admin/orders/show.html.erb:57
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/show.html.erb:58
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/show.html.erb:58
+  Rendered admin/orders/show.html.erb within layouts/application (Duration: 10.2ms | Allocations: 4904)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 9764)
+Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 0.6ms | Allocations: 11797)
+
+
+Started GET "/admin/orders/3" for 118.83.237.111 at 2022-06-02 03:06:09 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/orders_controller.rb:8:in `show'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/orders_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  ↳ app/views/admin/orders/show.html.erb:57
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/show.html.erb:58
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/show.html.erb:58
+  Rendered admin/orders/show.html.erb within layouts/application (Duration: 8.8ms | Allocations: 4090)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 9917)
+Completed 200 OK in 24ms (Views: 19.4ms | ActiveRecord: 0.6ms | Allocations: 11698)
+
+
+Started GET "/admin/orders/2" for 118.83.237.111 at 2022-06-02 03:06:17 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/admin/orders_controller.rb:8:in `show'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admin/orders_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  ↳ app/views/admin/orders/show.html.erb:57
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/orders/show.html.erb:58
+  Rendered admin/orders/show.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2735)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 7586)
+Completed 200 OK in 24ms (Views: 17.1ms | ActiveRecord: 0.7ms | Allocations: 9365)
+
+
+Started DELETE "/admin/sign_out" for 118.83.237.111 at 2022-06-02 03:08:51 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/admin/sign_in
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 1814)
+
+
+Started GET "/admin/sign_in" for 118.83.237.111 at 2022-06-02 03:08:52 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/shared/_links.html.erb (Duration: 0.9ms | Allocations: 156)
+  Rendered admin/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1753)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 6350)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 8472)
+
+
+Started GET "/customers/sign_in" for 118.83.237.111 at 2022-06-02 03:08:54 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (Duration: 0.7ms | Allocations: 341)
+  Rendered public/sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2727)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 6953)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 8175)
+
+
+Started POST "/customers/sign_in" for 118.83.237.111 at 2022-06-02 03:09:01 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "customer"=>{"email"=>"c@c", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "c@c"], ["LIMIT", 1]]
+  ↳ app/controllers/public/sessions_controller.rb:26:in `configure_sign_in_params'
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "c@c"], ["LIMIT", 1]]
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 492ms (ActiveRecord: 0.4ms | Allocations: 4399)
+
+
+Started GET "/" for 118.83.237.111 at 2022-06-02 03:09:02 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 115)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 5058)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 6074)
+
+
+Started GET "/cart_items" for 118.83.237.111 at 2022-06-02 03:09:04 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/public/cart_items/index.html.erb:19
+  Rendered public/cart_items/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1383)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 7207)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.2ms | Allocations: 8237)
+
+
+Started GET "/items" for 118.83.237.111 at 2022-06-02 03:11:16 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:12
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/items/index.html.erb:13
+  Rendered public/items/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 4687)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 10069)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.6ms | Allocations: 11401)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6e7b0ac510bf08c106505afe19e551ae64b2d557/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 03:11:16 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6e7b0ac510bf08c106505afe19e551ae64b2d557", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: ow224sgjh8wu6u83g02sg8ltk22u (https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjE2OjE2LjI3MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f1c8b176e38d178712ab8e43c6694dd04c7f5534/ddd4d1f25d2b182ab113f989698b4047.jpg)[0m
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjE2OjE2LjI3MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f1c8b176e38d178712ab8e43c6694dd04c7f5534/ddd4d1f25d2b182ab113f989698b4047.jpg
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 1469)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjE2OjE2LjI3MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f1c8b176e38d178712ab8e43c6694dd04c7f5534/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 03:11:16 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/items/1" for 118.83.237.111 at 2022-06-02 03:11:17 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/items/show.html.erb:6
+  Rendered public/items/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3579)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 8424)
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 0.3ms | Allocations: 9609)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM2N5TWpSeloycG9PSGQxTm5VNE0yY3dNbk5uT0d4MGF6SXlkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Sa1pEUmtNV1l5TldReVlqRTRNbUZpTVRFelpqazRPVFk1T0dJME1EUTNMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHUmtOR1F4WmpJMVpESmlNVGd5WVdJeE1UTm1PVGc1TmprNFlqUXdORGN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTAyVDAzOjE2OjE2LjI3MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f1c8b176e38d178712ab8e43c6694dd04c7f5534/ddd4d1f25d2b182ab113f989698b4047.jpg" for 118.83.237.111 at 2022-06-02 03:11:17 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ddd4d1f25d2b182ab113f989698b4047"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started POST "/items/1/cart_items" for 118.83.237.111 at 2022-06-02 03:11:18 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cart_item"=>{"amount"=>"1"}, "commit"=>"カートに入れる", "item_id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:7:in `create'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:8:in `create'
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ? AND "cart_items"."item_id" = ? LIMIT ?[0m  [["customer_id", 3], ["item_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mCartItem Create (0.2ms)[0m  [1m[32mINSERT INTO "cart_items" ("created_at", "updated_at", "customer_id", "item_id", "amount") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2022-06-02 03:11:18.704586"], ["updated_at", "2022-06-02 03:11:18.704586"], ["customer_id", 3], ["item_id", 1], ["amount", 1]]
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/cart_items_controller.rb:16:in `create'
+Redirected to https://40b47f1bcf124f7e89b171c1f2a076ae.vfs.cloud9.us-east-1.amazonaws.com/cart_items
+Completed 302 Found in 28ms (ActiveRecord: 4.0ms | Allocations: 7736)
+
+
+Started GET "/cart_items" for 118.83.237.111 at 2022-06-02 03:11:18 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::CartItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/public/cart_items/index.html.erb:19
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/public/cart_items/index.html.erb:23
+  Rendered public/cart_items/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 4461)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 9304)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.3ms | Allocations: 10323)
+
+
+Started GET "/orders/new" for 118.83.237.111 at 2022-06-02 03:11:20 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/orders/new.html.erb:15
+  [1m[36mAddress Load (1.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/views/public/orders/new.html.erb:20
+  Rendered public/orders/new.html.erb within layouts/application (Duration: 49.4ms | Allocations: 15287)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 65.5ms | Allocations: 19242)
+Completed 200 OK in 68ms (Views: 65.3ms | ActiveRecord: 1.9ms | Allocations: 20283)
+
+
+Started GET "/orders/new" for 118.83.237.111 at 2022-06-02 03:11:41 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/orders/new.html.erb:15
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/views/public/orders/new.html.erb:20
+  Rendered public/orders/new.html.erb within layouts/application (Duration: 15.0ms | Allocations: 3641)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 8232)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.2ms | Allocations: 9490)
+
+
+Started GET "/orders/new" for 118.83.237.111 at 2022-06-02 03:11:50 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/orders/new.html.erb:15
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/views/public/orders/new.html.erb:20
+  Rendered public/orders/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 3806)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 8398)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.2ms | Allocations: 9662)
+
+
+Started GET "/orders/new" for 118.83.237.111 at 2022-06-02 03:11:58 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/orders/new.html.erb:15
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/views/public/orders/new.html.erb:20
+  Rendered public/orders/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 3641)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 8232)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 9489)
+
+
+Started GET "/orders/new" for 118.83.237.111 at 2022-06-02 03:13:07 +0000
+Cannot render console from 118.83.237.111! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public/orders/new.html.erb:15
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/views/public/orders/new.html.erb:20
+  Rendered public/orders/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 3644)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 8235)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.2ms | Allocations: 9492)
+
+
