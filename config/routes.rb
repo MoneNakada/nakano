@@ -5,6 +5,9 @@ Rails.application.routes.draw do
     resources :customers, only: [:index, :show, :edit, :update]
     resources :genres, only: [:index, :create, :edit, :update]
     resources :items, except: [:destroy]
+    resources :orders, only: [:index, :show, :update] do
+      resources :order_details, only: [:update]
+    end
   end
 # 顧客用
 # URL /customers/sign_in ...
@@ -35,5 +38,9 @@ Rails.application.routes.draw do
     resources :cart_items, only: [:index]
     delete 'cart_items/destroy_all' => 'cart_items#destroy_all', as: 'destroy_all_cart_items'
     resources :addresses, only: [:index, :create, :edit, :update, :destroy]
+    post 'orders/confirm' => 'orders#confirm'
+    get 'orders/confirm' => 'orders#error'
+    get 'orders/thanks' => 'orders#thanks', as: 'thanks'
+    resources :orders, only: [:new, :index, :create, :show]
   end
 end
