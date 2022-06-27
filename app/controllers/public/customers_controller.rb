@@ -8,7 +8,8 @@ class Public::CustomersController < ApplicationController
   end
 
   def update
-    if @customer = Customer.update(customer_params)
+    @customer = current_customer
+    if @customer.update(customer_params)
       redirect_to mypage_path
     else
       render :edit
@@ -20,7 +21,7 @@ class Public::CustomersController < ApplicationController
 
   def withdraw
     @customer = current_customer
-    @customer = Customer.update(is_active: false)
+    @customer.update(is_active: false)
     reset_session
     redirect_to root_path
   end

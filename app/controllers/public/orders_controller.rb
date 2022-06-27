@@ -27,13 +27,13 @@ class Public::OrdersController < ApplicationController
     @order.shipping_cost = 800
     @cart_items = CartItem.all
     @sum = 0
-    
-    @cart_items.each do |cart_item| 
-      @sum += cart_item.subtotal 
+
+    @cart_items.each do |cart_item|
+      @sum += cart_item.subtotal
 		end
-		
+
     @order.grand_total = @order.shipping_cost + @sum.to_i
-    
+
     if @order.save
       current_customer.cart_items.each do |cart_item| #注文詳細モデルに注文商品を保存
         @order_detail = OrderDetail.new
@@ -54,9 +54,11 @@ class Public::OrdersController < ApplicationController
   end
 
   def index
+    @orders = Order.all
   end
 
   def show
+    @order = Order.find(params[:id])
   end
 
   private

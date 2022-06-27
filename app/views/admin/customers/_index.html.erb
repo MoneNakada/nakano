@@ -10,7 +10,7 @@
 		<% customers.each do |customer| %>
 			<tr>
 				<td><%= customer.id %></td>
-				<td><%= customer.full_name %></td>
+				<td><%= link_to customer.full_name, admin_customer_path(customer) %></td>
 				<td><%= customer.full_name_kana %></td>
 				<td>
 					<% if customer.is_active? %>
@@ -19,7 +19,6 @@
 						<span class="text-invalid">退会済み</span>
 					<% end %>
 				</td>
-				<td><%= link_to "詳細", admin_customer_path(customer), class: "btn btn-primary" %></td>
 			</tr>
 		<% end %>
 	</tbody>
